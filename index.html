@@ -11,8 +11,25 @@
 <style type="text/css">
 html, main {
 background: #FC01F3;
+	
 color: #FFF;
 font-family: 'Fredoka One', sans-serif;
+}
+	
+	html {
+  background: #FC01F3;
+}
+
+html:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 1000px);
+  left: 0;
+  width: 500px;
+  height:2000px;
+  background: #FED101;
+  transform: skew(-15deg);
+  transform-origin:top;
 }
 
 p {
