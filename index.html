@@ -12,7 +12,7 @@
 
 <style type="text/css">
 html, main {
-	background-color: #003adf;
+	background-color: #6a4a4a;
 color: #FFF;
 font-family: 'Fredoka One', sans-serif;
 }
@@ -83,11 +83,28 @@ padding-bottom: 30px;
 	}
 	.bottom {
 		background-image: linear-gradient(182deg, #fed101 20%, #FC01F3 calc(20% + 2px));
-		background-image: linear-gradient(182deg, #fed101 20%, #003adf calc(20% + 2px));
+		background-image: linear-gradient(182deg, #fed101 20%, #6a4a4a calc(20% + 2px));
 	}
+	
+.card-body h2 {
+	font-size: 1rem;
+	color: #fff;
+}
+.card-text {
+	font-size: 1rem;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	}
+
 @media (max-width: 991.98px) { 
+	.card-text {
+		font-size: 1.2rem;
+	}
 	.bottom {
-		background-image: linear-gradient(182deg, #fed101 10%, #003adf calc(10% + 2px));
+		background-image: linear-gradient(182deg, #fed101 10%, #6a4a4a calc(10% + 2px));
+	}
+	.card-body h2 {
+	font-size: 1.8rem;
 	}
 }
 	h2.thisweeksmenu {
@@ -106,20 +123,12 @@ background: #fed101;
 }
 
 
-.card-body h2 {
-	font-size: 1.2rem;
-	color: #fff;
-}
-.card-text {
-	color: #fff;
-	font-family: 'Open Sans', sans-serif;
-	}
+
+
 .howitworks {
-font-size: 1.2rem;
+font-size: 1.5rem;
 
 }
-
-
 
 .howitworks h2.display-4 {
 color: #fed101;
@@ -128,7 +137,7 @@ color: #fed101;
 
 .card {
 	margin-bottom: 1rem;
-	min-height: 455px;
+	min-height: 385px;
 	border: none;
     border-radius: 0;
 }
@@ -143,6 +152,7 @@ list-style-position: inside;
 padding-left: 0;
 color: #fed101;
 }
+
 ol span {
 	color: #FFF;
 	}
@@ -165,9 +175,17 @@ ol span {
 .faqs p{
 font-size: 1.2rem;
 }
-.answer {
+.answer, .note {
 font-family: 'Open Sans', sans-serif;
 }
+.notewrapper {
+	line-height: 1;
+	}
+.note {
+	font-size: 1rem;
+	color: #e8e2d8;
+	font-style: italic;
+	}
 .pillTitle {
 font-size: 1rem;
 font-family: 'Fredoka One', sans-serif;
@@ -200,7 +218,7 @@ font-family: 'Fredoka One', sans-serif;
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
 						<div class="card-body">
 							<h2>Croissant</h2>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">Everyone loves a croissant! Made with organic flour and really expensive butter. </p>
 							<div class="d-flex justify-content-between align-items-center"></div>
 						</div>
 					</div>
@@ -210,7 +228,7 @@ font-family: 'Fredoka One', sans-serif;
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
 						<div class="card-body">
 							<h2>Pain au chocolat</h2>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">What's better than a croissant? A croissant with chocolate wrapped inside it!</p>
 							<div class="d-flex justify-content-between align-items-center"></div>
 						</div>
 					</div>
@@ -220,7 +238,7 @@ font-family: 'Fredoka One', sans-serif;
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
 						<div class="card-body">
 							<h2>Blueberry scone</h2>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">Welcome to the scone zone. Made with giant organic blueberries.</p>
 							<div class="d-flex justify-content-between align-items-center"></div>
 						</div>
 					</div>
@@ -230,7 +248,7 @@ font-family: 'Fredoka One', sans-serif;
 						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
 						<div class="card-body">
 							<h2>Jalapeno cheddar scone</h2>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">Made with home-grown jalapenos and imported Scottish cheddar. Really!</p>
 							<div class="d-flex justify-content-between align-items-center"></div>
 						</div>
 					</div>
@@ -239,12 +257,13 @@ font-family: 'Fredoka One', sans-serif;
 		</div>
 	</div>
 	<div class="bottom pt-5">
-		<div class="py-4 col-md-7 mx-auto text-center">
+		<div class="py-4 col-md-8 mx-auto text-center">
 			<h2 class="">how it works</h2>
 			<ol class="mb-0 howitworks text-center">
-				<li><span>Pick any combination of 4 pastries from the options above.</span></li>
-				<li><span>Send me $20 and let me know what you want in your box and the delivery address.</span></li>
-				<li><span>I'll deliver a box of pastries on Sunday morning before 10am.</span></li>
+				<li class="py-2"><span>Pick any combination of 4 pastries from the options above.</span></li>
+				<li class="notewrapper"><span>Send me $20 and let me know what you want in your box and the delivery address.</span>
+				<span class="note py-2">Include your order and address in the message with your payment!</span></li>
+				<li class="py-2"><span>I'll deliver a box of pastries on Sunday morning before 10am.</span></li>
 			</ol>
 		</div>
 	</div>
