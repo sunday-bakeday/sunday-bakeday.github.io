@@ -11,25 +11,8 @@
 <style type="text/css">
 html, main {
 background: #FC01F3;
-	
 color: #FFF;
 font-family: 'Fredoka One', sans-serif;
-}
-	
-	html {
-  background: #FC01F3;
-}
-
-html:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 1000px);
-  left: 0;
-  width: 500px;
-  height:2000px;
-  background: #FED101;
-  transform: skew(-80deg);
-  transform-origin:top;
 }
 
 p {
@@ -59,6 +42,7 @@ h1, .h1 {
 	  
 .album {
 	background-color: #FED101;
+	background: URL('https://i.imgur.com/i4b9ORa.png');
 	}
 .card-body h2 {
 	font-size: 1.5rem;
@@ -68,6 +52,12 @@ h1, .h1 {
 	color: #0b43e0;
 	font-family: 'Open Sans', sans-serif;
 	}
+.bottom {
+	width: 100%;
+	min-height: 150px;
+	background: URL('https://i.imgur.com/Racp7Ic.png');
+	}
+
 </style>
 
 </head>
@@ -84,7 +74,7 @@ h1, .h1 {
       </div>
     </div>
   </div>
-   <div class="album py-5">
+   <div class="album py-2">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -146,12 +136,11 @@ h1, .h1 {
       </div>
     </div>
   </div>
-
+<div class="bottom"></div>
 </main>
 <footer class="footer">
 	
 
 </footer>
   
-	
 </html>
