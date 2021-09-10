@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <title>sunday.bakeday</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Open+Sans&display=swap" rel="stylesheet">
 <style type="text/css">
 html, main {
-background: #FC01F3;
+	background-color: #FC01F3;
 color: #FFF;
 font-family: 'Fredoka One', sans-serif;
 }
@@ -18,10 +18,7 @@ font-family: 'Fredoka One', sans-serif;
 p {
 
 }
-.footer {
-	background: #FC01F3;
-	min-height: 100px;
-}
+
 h1, .h1 {
 	font-size: 4rem;
 	}
@@ -34,29 +31,128 @@ h1, .h1 {
 	user-select: none;
 }
 
-@media (min-width: 768px) {
+
+	  
+.top {
+
+width: 100%;
+margin: auto;
+background: #FC01F3;
+padding-bottom: 20px;
+margin-bottom: 20px;
+}
+.bottom {
+	background-image: none;
+	background: #FC01F3;
+}
+h2.thisweeksmenu {
+color: #FC01F3;
+padding-bottom: 30px;
+}
+
 	.bd-placeholder-img-lg {
 	  font-size: 3.5rem;
-}
-}
-	  
-.album {
-	background-color: #FED101;
-	background: URL('https://i.imgur.com/i4b9ORa.png');
 	}
+	.top {
+		background-image: linear-gradient(178deg, #FC01F3 85%, #fed101 calc(85% + 2px));
+		padding-bottom: 82px;
+		margin-bottom: 0;
+	}
+	.bottom {
+		background-image: linear-gradient(182deg, #fed101 20%, #FC01F3 calc(20% + 2px));
+		background-image: linear-gradient(182deg, #fed101 20%, #FC01F3 calc(20% + 2px));
+	}
+@media (max-width: 991.98px) { 
+	.bottom {
+		background-image: linear-gradient(182deg, #fed101 10%, #FC01F3 calc(10% + 2px));
+	}
+}
+	h2.thisweeksmenu {
+		position: relative;
+		top: -20px;
+		padding-bottom: 0;
+	}
+
+.card-body {
+background-color: #FFF;
+}
+.album {
+
+background: #fed101;
+}
+
+
 .card-body h2 {
 	font-size: 1.5rem;
-	color: #0b43e0;
+	color: #FC01F3;
 }
 .card-text {
-	color: #0b43e0;
+	color: #FC01F3;
 	font-family: 'Open Sans', sans-serif;
 	}
-.bottom {
-	width: 100%;
-	min-height: 150px;
-	background: URL('https://i.imgur.com/Racp7Ic.png');
+.howitworks {
+font-size: 1.5rem;
+
+}
+
+
+
+.howitworks h2.display-4 {
+color: #fed101;
+}
+h1.display-2 {
+	font-size: 3rem;
+}
+@media (min-width: 768px) { 
+	h1.display-2 {
+		font-size: 5rem;
 	}
+}
+.card {
+	margin-bottom: 1rem;
+	min-height: 470px;
+	}
+h2 {
+color: #fed101;
+}
+.faqs h2 {
+color: #FC01F3;
+}
+ol {
+list-style-position: inside;
+padding-left: 0;
+color: #fed101;
+}
+ol span {
+	color: #FFF;
+	}
+.lead {
+	font-size: 1.5rem;
+	}
+.yellowline {
+	background: #fed101;
+	min-height: 5px;
+	border-radius: 3px;
+}
+.pill {
+padding: 10px 0;
+color: #fff;
+font-family: 'Open Sans', sans-serif;
+border: 5px solid #FFF;
+border-radius: 40px;
+}
+.faqs p{
+font-size: 1.5rem;
+}
+.answer {
+font-family: 'Open Sans', sans-serif;
+}
+.pillTitle {
+font-size: 1.2rem;
+font-family: 'Fredoka One', sans-serif;
+}
+
+
 
 </style>
 
@@ -65,82 +161,106 @@ h1, .h1 {
 <body>
 </body>
 <main>
-  <div class="px-4 py-3 my-3 text-center">
-    <img class="d-block mx-auto mb-4" src="https://i.imgur.com/J99QTQB.png" alt="" width="200">
-    <h1 class="display-5 fw-bold">@sunday.bakeday</h1>
-    <div class="col-lg-8 mx-auto">
-      <p class="lead mb-4">Fresh-baked pastries delivered on Sunday morning.<br>Mix and match 4 for $20. Grand Rapids, MI.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      </div>
-    </div>
-  </div>
-   <div class="album py-2">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-				<h2>Croissant</h2>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-
-              </div>
-            </div>
-          </div>
-        </div>
-		        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-				<h2>Pain au chocolat</h2>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-
-              </div>
-            </div>
-          </div>
-        </div>
-		        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-			<h2>Blueberry scone</h2>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-
-              </div>
-            </div>
-          </div>
-        </div>
-		        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-			<h2>Jalapeno cheddar scone</h2>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
-  </div>
-<div class="bottom"></div>
+	<div class="top text-center">
+		<div class="px-4 pt-4">
+			<img class="d-block mx-auto mb-3" src="https://gist.githubusercontent.com/sunday-bakeday/97e4115b5e3d76f1e0feb32f29a1b5c6/raw/6346c00dac4e53267e79a8099e4955bf5c2aa8b7/logo.svg" alt="" width="180" height="180">
+			<h1 class="display-2">@sunday.bakeday</h1>
+			<div class="col-lg-8 mx-auto">
+				<p class="lead mb-2">Fresh-baked pastries delivered on Sunday morning.<br>Mix and match 4 for $20. Grand Rapids, MI.</p>
+			</div>
+		</div>
+	</div>
+	<div class="album pb-3 text-center">
+		<h2 class="display-4 thisweeksmenu">this week's menu</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<div class="card">
+						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+						<div class="card-body">
+							<h2>Croissant</h2>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<div class="card">
+						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+						<div class="card-body">
+							<h2>Pain au chocolat</h2>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<div class="card">
+						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+						<div class="card-body">
+							<h2>Blueberry scone</h2>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<div class="card">
+						<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+						<div class="card-body">
+							<h2>Jalapeno cheddar scone</h2>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom pt-5">
+		<div class="py-4 col-md-7 mx-auto text-center">
+			<h2 class="display-4">how it works</h2>
+			<ol class="mb-0 howitworks text-center">
+				<li><span>Pick any combination of 4 pastries from the options above.</span></li>
+				<li><span>Send me $20 and let me know what you want in your box and the delivery address.</span></li>
+				<li><span>I'll deliver a box of pastries on Sunday morning before 10am.</span></li>
+			</ol>
+		</div>
+	</div>
+	<div class="yellowline col-md-3 mx-auto"></div>
+	<div class="">
+		<div class="py-4 col-md-7 mx-auto text-center">
+			<h2 class="display-4">order now</h2>
+			<p class="pb-3 howitworks text-center">Orders received before Friday at noon will be delivered on Sunday.</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-lg-3 mb-2">
+						<div class="pill"><p class="pillTitle mb-0">Venmo</p>@richard.crawford-24</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-3 mb-2">
+						<div class="pill"><p class="pillTitle mb-0">CashApp</p>$richardcrawford24</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-3 mb-2">
+						<div class="pill"><p class="pillTitle mb-0">Messenger</p>@richardcrawford24</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-3 mb-2">
+						<div class="pill"><p class="pillTitle mb-0">Cash</p>Message me!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="yellowline col-md-3 mx-auto"></div>
+	<div class="pb-5">
+		<div class="py-4 col-md-7 mx-auto text-center">
+			<h2 class="display-4">faqs</h2>
+			<div class="mb-0 faqs text-center">
+				<div class="mb-3"><p class="mb-1">I live on the Mongolian steppe - will you still deliver pastries to me?</p><span class="answer">No. Grand Rapids area only, please. As long as you live within about 20 minutes of downtown we're cool.</div>
+				<div class="mb-3"><p class="mb-1">Can I order something that isn't on the menu?</p><span class="answer">No, but you can email me with requests for next week!</div>
+				<div class="mb-3"><p class="mb-1">My nephew is graduating from Harvard - will you bake a load of stuff for the party?</p><span class="answer">If I can be bothered! Email me!</div>
+			</div>
+		</div>
+	</div>
 </main>
-<footer class="footer">
-	
-
-</footer>
-  
+<footer class="footer"></footer>
 </html>
