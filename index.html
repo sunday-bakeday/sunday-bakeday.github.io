@@ -37,6 +37,12 @@
 			h2 {
 				font-size: 2rem;
 				}
+			.card img {
+				background: #FFF;
+				border-radius: 10px 10px 0 0;
+				height: 250px;
+				object-fit: cover;
+				}
 			@media (min-width: 992px) { 
 				h1 {
 					font-size: 5rem;
@@ -47,6 +53,12 @@
 				.logo {
 					width: 180px;
 					height: 180px;
+					}
+				.card img {
+						background: #FFF;
+						border-radius: 10px 10px 0 0;
+						margin: 15px auto 5px;
+						height: auto;
 					}
 				}
 				
@@ -79,22 +91,14 @@
 				padding-bottom: 75px;
 				margin-bottom: 0;
 				}
-			.card-body h2 {
-				font-size: 1rem;
-				color: #fff;
-				}
-			.card-text {
-				font-size: 1rem;
-				color: #fff;
-				font-family: 'Open Sans', sans-serif;
-				}
+
 
 			@media (max-width: 991.98px) { 
 				.card-text {
 					font-size: 1.2rem;
 					}
 				.bottom {
-					background-image: linear-gradient(182deg, #fed101 10%, #5a3791 calc(10% + 2px));
+					background-image: linear-gradient(182deg, #fed101 10%, #FC01F3 calc(10% + 2px));
 					}
 				.card-body h2 {
 					font-size: 1.4rem;
@@ -103,18 +107,31 @@
 
 
 			.card-body {
-				background-color: #FC01F3;
-				border-radius: 0;
+				background: #FC01F3;
+				color: #fff;
+				padding: 1rem;
+				border-radius: 0 0 10px 10px;
+				}
+			.card-body h2 {
+				font-size: 1rem;
+				color: #fff;
+				}
+			.card-text {
+				font-size: 1rem;
+
+				font-family: 'Open Sans', sans-serif;
 				}
 
 			.howitworks {
 				font-size: 1.2rem;
 				}
 			.card {
+				border: none;
 				margin-bottom: 1rem;
 				min-height: 372px;
-				border: none;
-				border-radius: 0;
+				
+				border-radius: 15px;
+				background-color: transparent;
 				}
 			h2 {
 				color: #fed101;
@@ -168,8 +185,9 @@
 				/*background: URL('https://i.imgur.com/BtDWgyy.jpg');
 				background-size: cover;
 				text-shadow: 0 0 2px #a4009e;*/
-				background-image: linear-gradient(182deg, #fed101 4%, #5a3791 calc(4% + 2px));
+				background-image: linear-gradient(182deg, #fed101 4%, #FC01F3 calc(4% + 2px));
 				}
+
 		</style>
 	</head>
 	<body>
@@ -186,9 +204,9 @@
 			<h2 class="thisweeksmenu">this week's menu</h2>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-12 col-lg-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
+							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
 							<div class="card-body">
 								<h2>Croissant</h2>
 								<p class="card-text">Everyone loves a croissant! Made with organic flour and really expensive butter. </p>
@@ -196,9 +214,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-12 col-lg-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
+							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
 							<div class="card-body">
 								<h2>Pain au chocolat</h2>
 								<p class="card-text">What's better than a croissant? A croissant with chocolate inside it!</p>
@@ -206,9 +224,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-12 col-lg-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
+							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
 							<div class="card-body">
 								<h2>Blueberry scone</h2>
 								<p class="card-text">Welcome to the scone zone. Made with giant organic blueberries.</p>
@@ -216,9 +234,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-12 col-lg-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#fff"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image FPO</text></svg>
+							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
 							<div class="card-body">
 								<h2>Jalapeno cheddar scone</h2>
 								<p class="card-text">Made with home-grown jalapenos and imported Scottish cheddar. Really!</p>
@@ -231,7 +249,7 @@
 		</div>
 		<div class="bottomWrapper">
 			<div class="bottom pt-5">
-				<div class="py-4 col-md-12 mx-auto text-center">
+				<div class="py-3 col-md-12 mx-auto text-center">
 					<h2 class="">how it works</h2>
 					<ol class="mb-0 howitworks text-center">
 						<li class="py-2"><span>Pick any combination of 4 pastries.</span></li>
