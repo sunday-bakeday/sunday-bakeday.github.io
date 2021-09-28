@@ -5,15 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>sunday.bakeday</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" src="/css/animate.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Open+Sans&display=swap" rel="stylesheet">
+		<script>
+		console.log("Hello world!");
+		</script>
 		<style>
 			html, body {
 				line-height: 1.3;
-				background-color: #fed101;
+
 				color: #FFF;
 				font-family: 'Fredoka One', sans-serif;
 				}
@@ -38,7 +42,6 @@
 				font-size: 2rem;
 				}
 			.card img {
-				background: #FFF;
 				border-radius: 10px 10px 0 0;
 				height: 250px;
 				object-fit: cover;
@@ -60,7 +63,6 @@
 					height: 180px;
 					}
 				.card img {
-						background: #FFF;
 						border-radius: 10px 10px 0 0;
 						margin: 0 auto 5px;
 						height: auto;
@@ -118,7 +120,13 @@
 				background: #FC01F3;
 				color: #fff;
 				padding: 1rem;
-				border-radius: 0 0 10px 10px;
+				transform: rotate(0deg);
+				}
+			.card-body2 {
+				transform: rotate(0deg);
+				}
+			.card-body4 {
+				transform: rotate(0deg);
 				}
 
 			.card-text {
@@ -133,9 +141,6 @@
 			.card {
 				border: none;
 				margin-bottom: 1rem;
-				min-height: 372px;
-				
-				border-radius: 15px;
 				background-color: transparent;
 				}
 			h2 {
@@ -190,30 +195,65 @@
 				/*background: URL('https://i.imgur.com/BtDWgyy.jpg');
 				background-size: cover;
 				text-shadow: 0 0 2px #a4009e;*/
-				background-image: linear-gradient(182deg, #fed101 4%, #FC01F3 calc(4% + 2px));
+				background-image: linear-gradient(182deg, #fed101 6%, #FC01F3 calc(6% + 2px));
 				}
+				
+.fade-in {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+.album {
+  background-color: #fed101;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
 		</style>
 	</head>
 	<body>
 		<div class="top text-center">
-			<div class="px-2 pt-4">
+			<div class="px-2 pt-4 fade-in">
 				<a href="https://www.instagram.com/sunday.bakeday/"><img class="logo d-block mx-auto mb-3" src="https://gist.githubusercontent.com/sunday-bakeday/97e4115b5e3d76f1e0feb32f29a1b5c6/raw/6346c00dac4e53267e79a8099e4955bf5c2aa8b7/logo.svg" alt="Sunday Bakeday logo" width="150" height="150"></a>
-				<h1><a href="https://www.instagram.com/sunday.bakeday/">@sunday.bakeday</a></h1>
+				<h1><a href="https://www.instagram.com/sunday.bakeday/">sunday bakeday!</a></h1>
 				<div class="col-lg-6 mx-auto">
-					<p class="lead mb-2">Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. <br>Grand Rapids, MI.</p>
+					<p class="lead mb-2 d-none d-sm-block">Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. <br>Grand Rapids, MI.</p>
+					<p class="lead mb-2 d-block d-sm-none">Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. Grand Rapids, MI.</p>
 				</div>
 			</div>
 		</div>
-		<div class="album pb-3 text-center">
-			<h2 class="thisweeksmenu">this week's menu</h2>
+		<div class="album text-center">
+			<h2 class="thisweeksmenu fade-in">current menu</h2>
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
-							<div class="card-body">
-								<h2>Croissant</h2>
+							<div class="card-body  card-body1">
+								<h2>Croissants</h2>
 								<p class="card-text">Everyone loves a croissant! Made with organic flour and really expensive butter. </p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
@@ -221,9 +261,8 @@
 					</div>
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
-							<div class="card-body">
-								<h2>Pain au chocolat</h2>
+							<div class="card-body card-body2">
+								<h2>Pains au chocolat</h2>
 								<p class="card-text">What's better than a croissant? A croissant with chocolate inside it!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
@@ -231,9 +270,8 @@
 					</div>
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
-							<div class="card-body">
-								<h2>Blueberry scone</h2>
+							<div class="card-body card-body3">
+								<h2>Blueberry scones</h2>
 								<p class="card-text">Welcome to the scone zone. Made with giant organic blueberries.</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
@@ -241,9 +279,8 @@
 					</div>
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
-							<img class="bd-placeholder-img card-img-top" width="100%" src="https://i.imgur.com/CfQodeH.jpg">
-							<div class="card-body">
-								<h2>Jalapeno cheddar scone</h2>
+							<div class="card-body card-body4">
+								<h2>Jalapeno cheddar scones</h2>
 								<p class="card-text">Made with home-grown jalapenos and imported Scottish cheddar. Really!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
