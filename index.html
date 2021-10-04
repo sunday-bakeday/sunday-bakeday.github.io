@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>sunday.bakeday</title>
+		<title>sunday bakeday</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" src="/css/animate.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -116,7 +116,9 @@
 					}
 				}
 
-
+			p.contactInfo {
+				margin-bottom: 0;
+				}
 			.card-body {
 				background: #FC01F3;
 				color: #fff;
@@ -229,7 +231,7 @@
 		<div class="top text-center">
 			<div class="px-2 pt-4 fade-in">
 				<a href="https://www.instagram.com/sunday.bakeday/"><img class="logo d-block mx-auto mb-3" src="https://gist.githubusercontent.com/sunday-bakeday/97e4115b5e3d76f1e0feb32f29a1b5c6/raw/6346c00dac4e53267e79a8099e4955bf5c2aa8b7/logo.svg" alt="Sunday Bakeday logo" width="150" height="150"></a>
-				<h1><a href="https://www.instagram.com/sunday.bakeday/">sunday bakeday!</a></h1>
+				<h1><a href="https://www.instagram.com/sunday.bakeday/">sunday bakeday</a></h1>
 				<div class="col-lg-6 mx-auto">
 					<p class="lead mb-2 d-none d-sm-block">Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. <br>Grand Rapids, MI.</p>
 					<p class="lead mb-2 d-block d-sm-none">Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. Grand Rapids, MI.</p>
@@ -298,14 +300,35 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 col-md-4 col-lg-4 mb-2">
-								<div class="pill"><p class="pillTitle mb-0"><a href="https://venmo.com/richard-crawford-24">Venmo</a></p>@richard.crawford-24</div>
+								<div class="pill" id="venmoPill">
+									<p class="pillTitle mb-0">
+										<a class="infoLink" aria-expanded="false" data-bs-toggle="collapse" href="#venmoCollapse" role="button" href="#">Venmo</a>
+									</p>
+									<p class="contactInfo collapse" id="venmoCollapse">
+										<a href="https://venmo.com/richard-crawford-24">@richard.crawford-24</a>
+									</p>
+								</div>
 							</div>
 							<div class="col-xs-12 col-md-4 col-lg-4 mb-2">
-								<div class="pill"><p class="pillTitle mb-0"><a href="https://cash.app/richardcrawford24">CashApp</a></p>$richardcrawford24</div>
+								<div class="pill" id="cashPill">
+									<p class="pillTitle mb-0">
+										<a class="infoLink" aria-expanded="false" data-bs-toggle="collapse" href="#cashCollapse" role="button" href="#">CashApp</a>
+									</p>
+									<p class="contactInfo collapse" id="cashCollapse">
+										<a href="https://cash.app/richardcrawford24">$richardcrawford24</a>
+									</p>
+								</div>
 							</div>
 							<div class="col-xs-12 col-md-4 col-lg-4 mb-2">
-								<div class="pill"><p class="pillTitle mb-0"><a href="http://m.me/richardcrawford24">Messenger</a></p>@richardcrawford24</div>
-							</div>
+								<div class="pill" id="venmoPill">
+									<p class="pillTitle mb-0">
+										<a class="infoLink" aria-expanded="false" data-bs-toggle="collapse" href="#messengerCollapse" role="button" href="#">Messenger</a>
+									</p>
+									<p class="contactInfo collapse" id="messengerCollapse">
+										<a href="http://m.me/richardcrawford24">@richardcrawford24</a>
+									</p>
+								</div>
+							</div>							
 						</div>
 						<p class="mb-0 pt-3">You can also pay with cold hard cash! Just <a href="https://www.instagram.com/sunday.bakeday/">message me on Instagram</a> or <a href="mailto:sunday.bakeday.69@gmail.com?subject=I&nbsp;want&nbsp;to&nbsp;give&nbsp;you&nbsp;a&nbsp;lot&nbsp;of&nbsp;money">email me</a> and we'll figure it out.</p>
 					</div>
