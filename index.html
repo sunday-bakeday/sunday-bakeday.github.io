@@ -209,6 +209,10 @@
 				font-size: 1rem;
 				font-family: 'Open Sans', sans-serif;
 				}
+			.disclaimer {
+				font-size: 0.7rem !important;
+				font-family: 'Open Sans', sans-serif;
+			}
 			.note {
 				display: block;
 				font-size: 1rem;
@@ -234,6 +238,12 @@
 			}
 			.album {
 			  background-color: #fed101;
+			}
+			.badge {
+				z-index: 1;
+				top: -5px;
+				left: 10%;
+				background: #0B43E0;
 			}
 			@keyframes fadeIn {
 			  0% {opacity:0;}
@@ -300,12 +310,12 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 		</div>
 		<div class="album text-center">
 			<h2 class="thisweeksmenu fade-in">this week's menu</h2>
-			<!--<div class="container">
+			<div class="container">
 				<div class="row ">
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
 							<div class="card-body fade-in">
-		    						<h2>Croissants</h2>
+		    						<h2>Croissant</h2>
 								<p class="card-text">Everyone loves a croissant! Made with organic flour and really expensive butter. </p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
@@ -314,7 +324,7 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
 							<div class="card-body fade-in">
-								<h2>Pains au chocolat</h2>
+								<h2>Pain au chocolat</h2>
 								<p class="card-text">What's better than a croissant? A croissant with chocolate inside it!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
@@ -323,24 +333,26 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
 							<div class="card-body fade-in">
-								<h2>Blueberry scones</h2>
+								<h2>Blueberry scone</h2>
 								<p class="card-text">Welcome to the scone zone. Made with organic flour and giant organic blueberries.</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 col-lg-3">
+					<div class="col-12 col-md-6 col-lg-3 position-relative">
+						<span class="badge rounded-pill position-absolute">NEW!</span>
 						<div class="card">
 							<div class="card-body fade-in">
-								<h2>Choconut cookies</h2>
-								<p class="card-text">A huge, chewy, chocolate chip cookie with coconut flakes and pecans.</p>
+								
+								<h2>Cranberry mind boggler</h2>
+								<p class="card-text">A cranberry/white chocolate chip cookie. Guaranteed to boggle your mind.<sup>*</sup></p>
 								<div class="d-flex justify-content-between align-items-center"></div>
-							</div>
+						  </div>
 						</div>
 					</div>
 				</div>
-			</div>-->
-			<div class="container">
+			</div>
+			<!--<div class="container">
 				<div class="row ">
 					<div class="col-12 col-md-6 col-lg-12">
 						<div class="card">
@@ -353,7 +365,7 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 					</div>
 
 				</div>
-			</div>			
+			</div>	-->		
 		</div>
 		<div class="bottomWrapper">
 			<div class="bottom pt-5">
@@ -445,7 +457,8 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 </div>
 
 <!--End mc_embed_signup-->
-							<a href="https://www.instagram.com/sunday.bakeday/"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="36"></a>	
+							<a href="https://www.instagram.com/sunday.bakeday/"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="36"></a>
+							<p class="disclaimer mt-5">*Not legally guaranteed to boggle your mind.</p>
 						</div>
 					</div>
 				</div>
