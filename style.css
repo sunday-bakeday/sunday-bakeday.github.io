@@ -267,8 +267,7 @@
 			  0% {opacity:0;}
 			  100% {opacity:1;}
 			}
-/* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
-Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
 #mc_embed_signup{clear:left; width:100%;}
 #mc_embed_signup form {text-align:center; padding:10px 0 10px 0;}
 .mc-field-group { display: inline-block; } /* positions input field horizontally */
