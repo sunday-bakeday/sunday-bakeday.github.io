@@ -21,7 +21,7 @@
 		  gtag('config', 'G-GHEVQK4VSF');
 		</script>		
 		<style>
-		 html, body {
+		html, body {
 		     line-height: 1.3;
 		     color: #FFF;
 		     font-family: 'Fredoka One', sans-serif;
@@ -231,7 +231,7 @@
 		     background-size: cover;
 		     text-shadow: 0 0 2px #a4009e;
 		    */
-		     background-image: linear-gradient(182deg, #fed101 6%, #FC01F3 calc(6% + 2px));
+		     background-image: linear-gradient(182deg, #fed101 4%, #FC01F3 calc(4% + 2px));
 		}
 		 .fade-in {
 		     animation: fadeIn 1s;
@@ -423,7 +423,129 @@
 			position: relative;
 			top: -1px;
 		}
+		#map {
+		  	height: 320px;
+			border-radius: 1rem;
+		}
 		</style>
+		<script>
+		function initMap() {
+  			const map = new google.maps.Map(document.getElementById("map"), {
+    			zoom: 11,
+				center: { lat: 42.963360, lng: -85.644000 },
+				mapTypeId: "roadmap",
+				disableDefaultUI: true, // a way to quickly hide all controls
+				mapTypeControl: false,
+				scaleControl: true,
+				zoomControl: true,
+				keyboardShortcuts: false,
+				controlSize: 20,
+				styles: [
+					{
+						"featureType": "all",
+						"elementType": "labels.text",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "all",
+						"elementType": "labels.icon",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "labels",
+						"stylers": [
+							{
+								"visibility": "simplified"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"saturation": "-28"
+							},
+							{
+								"lightness": "16"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"visibility": "on"
+							},
+							{
+								"color": "#fed101"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{
+								"visibility": "on"
+							},
+							{
+								"lightness": "71"
+							}
+						]
+					}
+				]
+  			});
+	
+			const triangleCoords = [
+				{ lat: 43.01532741040676, lng: -85.74420160591976 },
+				{ lat: 42.986075717540764, lng: -85.74420160591976 },
+				{ lat: 42.95718699758786, lng: -85.7436866217889 },
+				{ lat: 42.91885711583546, lng: -85.74454492867366 },
+				{ lat: 42.897608318438856, lng: -85.74385828316585 },
+				{ lat: 42.89735680952524, lng: -85.70437616646663 },
+				{ lat: 42.89748256411025, lng: -85.64583963692561 },
+				{ lat: 42.897575618382334, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.56751103714721 },
+				{ lat: 42.91216138786569, lng: -85.56802602127807 },
+				{ lat: 42.91190993831881, lng: -85.5287155659558 },
+				{ lat: 42.92108718213047, lng: -85.52991719559448 },
+				{ lat: 42.92133859423217, lng: -85.53884358719604 },
+				{ lat: 42.94899344926061, lng: -85.53930398632568 },
+				{ lat: 42.963064568340236, lng: -85.53964730907958 },
+				{ lat: 42.963567048799156, lng: -85.54393884350341 },
+				{ lat: 42.97072694940378, lng: -85.54479715038818 },
+				{ lat: 42.97072694940378, lng: -85.55990335156005 },
+				{ lat: 42.98516982601827, lng: -85.55904504467529 },
+				{ lat: 42.985420976468895, lng: -85.58359262157958 },
+				{ lat: 43.0287290741364, lng: -85.58324929882568 },
+				{ lat: 43.02951335953451, lng: -85.66989537884277 },
+				{ lat: 43.01517503971821, lng: -85.6773197333959 }
+		  	];
+
+			const bermudaTriangle = new google.maps.Polygon({
+				paths: triangleCoords,
+				strokeColor: "#FC01F3",
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: "#FC01F3",
+				fillOpacity: 0.4,
+			});	
+  
+  			bermudaTriangle.setMap(map);
+		}		
+		</script>
 	</head>
 	<body>
 		<div class="top text-center">
@@ -543,7 +665,8 @@
 				<div class="py-4 col-md-10 col-lg-7 mx-auto text-center">
 					<h2>faqs</h2>
 					<div class="mb-0 faqs text-center">
-						<div class="mb-3"><p class="mb-1">I live on the Mongolian steppe - will you deliver pastries to me?</p><span class="answer">No. Grand Rapids area only, please. As long as you live within about 20 minutes of downtown we're cool. If you live out of town you're welcome to pick them up!</span></div>
+						<div class="mb-3"><p class="mb-1">I live on the Mongolian steppe - will you deliver pastries to me?</p><span class="answer">No. Grand Rapids area only, please. If you live in the purple area below we're cool.</span></div>
+						<div class="mb-3" id="map"></div>						
 						<div class="mb-3"><p class="mb-1">I'm from the 1950s and don't have Venmo or CashApp. Do you take cash?</p><span class="answer">Absolutely. Send me your order on <a href="https://www.instagram.com/sunday.bakeday/">Instagram</a> or by <a href="mailto:orders@sundaybakeday.com">email</a>.</span></div>
 						<div class="mb-3"><p class="mb-1">My nephew is being released from prison after serving 20 years for a crime he didn't commit. Will you bake lots of pastries for the party?</p><span class="answer">Probably, if I have time. <a href="mailto:orders@sundaybakeday.com">Email me!</a></span></div>
 					</div>
@@ -573,5 +696,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly" async></script>
 	</body>
 </html>
