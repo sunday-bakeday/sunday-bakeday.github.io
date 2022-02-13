@@ -11,7 +11,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Open+Sans&display=swap" rel="stylesheet">
-		<link href="http://www.sundaybakeday.com/style.css" rel="stylesheet" type="text/css">
 		<meta property="og:image" content="http://www.sundaybakeday.com/sb.jpg" />
 		<meta property="og:description" content="Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. Grand Rapids, MI." />
 		<meta property="og:url" content="http://www.sundaybakeday.com/" />
@@ -53,9 +52,7 @@
 		     font-size: 2rem;
 		     color: #fed101;
 		}
-		 h2.notThisWeek {
-		     font-size: 32px;
-		}
+
 		 h3 {
 		     font-size: 1.5rem;
 		     color: #fed101;
@@ -70,8 +67,7 @@
 		     font-size: 1.4rem;
 		     color: #fff;
 		}
-		 .card-body h2.notThisWeek {
-		     font-size: 2.4rem;
+		 .card-body .notThisWeek {
 		     color: #fff;
 		     animation-duration: 900ms;
 		     animation-name: blink;
@@ -91,9 +87,6 @@
 			 font-size: 5rem;
 		    }
 		     h2 {
-			 font-size: 3.5rem;
-		    }
-		     h2.notThisWeek {
 			 font-size: 3.5rem;
 		    }
 		     .logo {
@@ -124,9 +117,7 @@
 		     margin-bottom: 20px;
 		}
 		 h2.thisweeksmenu {
-		     color: #FC01F3;
-		     position: relative;
-		     top: -15px;
+		     font-size: 2rem;
 		}
 		 .bd-placeholder-img-lg {
 		     font-size: 3.5rem;
@@ -140,6 +131,8 @@
 		     .card-text {
 			 font-size: 1.2rem;
 		    }
+			.notThisWeek {
+			display: block;}
 		     .bottom {
 			 background-image: linear-gradient(182deg, #fed101 10%, #FC01F3 calc(10% + 2px));
 		    }
@@ -432,6 +425,11 @@
 		  	height: 320px;
 			border-radius: 1rem;
 		}
+		.imageWrapper img {
+			position: relative;
+			left: -17px;
+			top: -15px;
+		}
 		</style>
 		<script>
 		function initMap() {
@@ -564,7 +562,7 @@
 			</div>
 		</div>
 		<div class="album text-center">
-			<h2 class="thisweeksmenu fade-in">menu for Sunday February 13th</h2>
+			
 			<!--<div class="container">
 				<div class="row ">				
 					<div class="col-12 col-md-6 col-lg-3">
@@ -615,11 +613,17 @@
 				</div>
 			</div>-->
 			<div class="container">
-				<div class="row ">
+				<div class="row justify-content-center imageWrapper">
+					<div class="col-12 col-md-4">
+						<img class="img-fluid" src="https://sundaybakeday.com/box.png" alt=""/>
+					</div>				
+				</div>
+				<div class="row justify-content-center">			
 					<div class="col-12 col-md-6 col-lg-12">
 						<div class="card">
 							<div class="card-body fade-in">
-		    					<h2 class="notThisWeek">sold out!</h2>
+							<h2 class="thisweeksmenu">menu for Sunday Feb 13: <span class="notThisWeek">sold out!</span></h2>
+		    					
 								<p class="card-text">Like Metallica in the 90s, orders for 2/13 have sold out! Sign up for the mailing list below to be the first to know next time it's happening!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
