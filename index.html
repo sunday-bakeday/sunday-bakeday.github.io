@@ -139,6 +139,9 @@
 		     .card-body h2 {
 			 font-size: 1.4rem;
 		    }
+			.imageWrapper img {
+				margin-bottom: 1rem;
+			}			
 		}
 		 p.contactInfo {
 		     margin-bottom: 0;
@@ -425,9 +428,13 @@
 		  	height: 320px;
 			border-radius: 1rem;
 		}
-		.imageWrapper img {
+		.imageWrapper {
 			position: relative;
 			top: -15px;
+			left: -8px;
+		}
+		.imageWrapper img {
+			max-width: 105%;
 		}
 		</style>
 		<script>
@@ -613,12 +620,12 @@
 			</div>-->
 			<div class="container">
 				<div class="row justify-content-center imageWrapper">
-					<div class="col-12 col-md-4">
+					<div class="col-12 col-md-6 col-lg-4">
 						<img class="img-fluid" src="https://sundaybakeday.com/pinkbox.png" alt=""/>
 					</div>				
 				</div>
 				<div class="row justify-content-center">			
-					<div class="col-12 col-md-6 col-lg-12">
+					<div class="col-12 col-md-12">
 						<div class="card">
 							<div class="card-body fade-in">
 							<h2 class="thisweeksmenu">menu for Sunday Feb 13: <span class="notThisWeek">sold out!</span></h2>
