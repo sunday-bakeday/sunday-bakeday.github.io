@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -610,15 +609,12 @@
 					</div>				
 				</div>
 			<div class="container">
-				<div class="row justify-content-center">				
+				<!--<div class="row justify-content-center">				
 					<div class="col-12 col-md-12">
-						<h2 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">menu for Sunday May 1 <span class="notThisWeek"></span></h2>
+						<h2 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">menu for Sunday April 10 <span class="notThisWeek">test</span></h2>
 					</div>
 				</div>			
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-12">
-						<h4 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">viennoiseries</h4>
-					</div>
+				<div class="row ">				
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
 							<div class="card-body fade-in menuItem">
@@ -637,17 +633,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="row justify-content-center">	
-					<div class="col-12 col-md-12">
-						<h4 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">the scone zone</h4>
-					</div>				
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="card">
 							<div class="card-body fade-in menuItem">
 								<h2>blueberry scone</h2>
-								<p class="card-text">If you've never visited the Scone Zone before,start with a Bakeday classic! A light, flaky scone filled with big fat organic bloobs. People ask me for this recipe all the time.</p>
+								<p class="card-text">Welcome to the scone zone. Made with organic flour and giant organic blueberries.</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
 						</div>
@@ -655,29 +645,20 @@
 					<div class="col-12 col-md-6 col-lg-3 position-relative">
 						<div class="card">
 							<div class="card-body fade-in menuItem">
-								<h2>double chocolate scone</h2>
-								<p class="card-text">Let's not kid ourselves, this is like a cake/brownie that you can eat for breakfast. And why not? You're an adult! A chocolate scone with chocolate chips and a vanilla glaze.</p>
+								<h2>choconut cookie</h2>
+								<p class="card-text">A huge, chewy, chocolate chip cookie with coconut flakes and pecans.</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 						  	</div>
 						</div>
-					</div>	
-										<div class="col-12 col-md-6 col-lg-3 position-relative">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h2>jalapeno cheddar scone</h2>
-								<p class="card-text">Whenever I make scones my wife is like "are you making jalapeno cheddar this time?" and then looks disappointed when I say no. They're really good and really cheesy. For the advanced scone taster.</p>
-								<div class="d-flex justify-content-between align-items-center"></div>
-						  	</div>
-						</div>
-					</div>	
-				</div>
-				<!--<div class="row justify-content-center">			
+					</div>						
+				</div>-->
+				<div class="row justify-content-center">			
 					<div class="col-12 col-md-12">
 						<div class="card">
 							<div class="card-body fade-in">
-							<h2 class="thisweeksmenu"><span class="notThisWeek">sold out!</span></h2>
+							<h2 class="thisweeksmenu">menu for Sunday April 10: <span class="notThisWeek">sold out!</span></h2>
 		    					
-								<p class="card-text">You can sign up for the mailing list below to be the first to know next time Bakeday is happening!</p>
+								<p class="card-text">Sorry, you missed it! But you can sign up for the mailing list below to be the first to know next time Bakeday is happening!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 								<div id="mc_embed_signup">
 								<form action="https://github.us20.list-manage.com/subscribe/post?u=d8ad137324977f3a975bc2711&amp;id=b2be11a859" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -693,7 +674,7 @@
 							</div>
 						</div>
 					</div>
-				</div>-->			
+				</div>			
 			</div>			
 		</div>
 		<div class="bottomWrapper">
@@ -763,4 +744,3 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly" async></script>
 	</body>
 </html>
-
