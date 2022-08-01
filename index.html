@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -77,6 +78,13 @@
 		     color: #fff;
 		}
 		 .card-body .notThisWeek {
+		     color: #fff;
+		     animation-duration: 900ms;
+		     animation-name: blink;
+		     animation-iteration-count: infinite;
+		     animation-direction: alternate;
+		}
+		 .blink {
 		     color: #fff;
 		     animation-duration: 900ms;
 		     animation-name: blink;
@@ -166,10 +174,10 @@
 		     transform: rotate(0deg);
 		     border-radius: 15px;
 		}
-		.card-body.menuItem {
+		/*.card-body.menuItem {
 			min-height: 164px;
 			min-height: 124px;
-			}
+			}*/
 		 .card-text {
 		     font-size: 1rem;
 		     font-family: 'Open Sans', sans-serif;
@@ -610,71 +618,81 @@
 					</div>				
 				</div>-->
 			<div class="container">
-				<!--<div class="row justify-content-center">				
+				<div class="row justify-content-center">				
 					<div class="col-12 col-md-12 col-lg-9">
-						<h2 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">menu for Sunday July 10<span class="notThisWeek"></span></h2>
-						<p class="pink mb-4 p-3" style="background: #FFF;border-radius: 1rem;" >100% of the proceeds from this bakeday will be donated to the <a class="pink" href="https://midwestaccesscoalition.org/">Midwest Access Coalition</a> in support of their mission to provide access to safe, free, legal abortions for everyone.</p>
+						<h2 class="thisweeksmenu pink mb-3" style="margin-bottom: 0;">menu for Sunday August 14<span class="notThisWeek"></span></h2>
+						<p class="pink">You'll find pictures of all of this stuff on <a class="pink" href="https://www.instagram.com/sunday.bakeday/">Instagram</a>!</p>
 					</div>
 				</div>			
-				<div class="row justify-content-center ">				
-					<div class="col-12 col-md-6 col-lg-3">
+				<div class="row justify-content-center">				
+					<div class="col-12 col-md-12 col-lg-6">
 						<div class="card">
 							<div class="card-body fade-in menuItem">
-		    						<h2>#1 croissant</h2>
+		    					<h2>#1 croissant</h2>
 								<p class="card-text">Everyone loves a croissant! Made with organic flour and really expensive butter. </p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
 							
 						</div>
 					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h2>#2 pain au chocolat</h2>
-								<p class="card-text">What's better than a croissant? A croissant with 3 sticks of chocolate inside it!</p>
-								<div class="d-flex justify-content-between align-items-center"></div>
-							</div>
-						</div>
-					</div>
 				</div>
-				<div class="row justify-content-center ">	
-					<div class="col-12 col-md-6 col-lg-3">
+				<div class="row justify-content-center">				
+					<div class="col-12 col-md-12 col-lg-6">
 						<div class="card">
 							<div class="card-body fade-in menuItem">
-								<h2>#3 blueberry scone</h2>
-								<p class="card-text">Welcome to the scone zone. Made with organic flour and giant organic blueberries.</p>
+		    						<h2>#2 Nutella croissant</h2>
+								<p class="card-text">A croissant filled with Nutella. What else can I say? You're either 100% on board with that or you need to have your head examined.</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3 position-relative">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h2>#4 jalapeno cheddar scone</h2>
-								<p class="card-text">It is what it sounds like. People lost their minds for these last time.</p>
-								<div class="d-flex justify-content-between align-items-center"></div>
-						  	</div>
-						</div>
-					</div>						
-					<div class="col-12 col-md-6 col-lg-3 position-relative">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h2>#5 choco-NO-nut cookie</h2>
-								<p class="card-text">A bakeday classic without the nuts! A big chocolate chip cookie with coconut flakes.</p>
-								<div class="d-flex justify-content-between align-items-center"></div>
-						  	</div>
 							
 						</div>
 					</div>
+				</div>
+				<div class="row justify-content-center">				
+					<div class="col-12 col-md-12 col-lg-6">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+		    					<h2>#3 blueberry scone</h2>
+								<p class="card-text">Welcome to the scone zone. A bakeday favorite made with organic flour and giant organic blueberries.</p>
+								<div class="d-flex justify-content-between align-items-center"></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">				
+					<div class="col-12 col-md-12 col-lg-6">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+		    					<h2>#4 choco-NO-nut cookie</h2>
+								<p class="card-text">A bakeday classic without the nuts! A big, chewy chocolate chip cookie with coconut flakes.</p>
+								<div class="d-flex justify-content-between align-items-center"></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">				
+					<div class="col-12 col-md-12 col-lg-6">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+		    					<h2>#5 crownie - <span class="blink">NEW!</span></h2>
+								<p class="card-text">The unholy fruit of the forbidden love between a chocolate chip cookie and a brownie. Decadent, chocolatey, and delicious.</p>
+								<div class="d-flex justify-content-between align-items-center"></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>				
+				
 
-				</div>-->
-				<div class="row justify-content-center">			
+				<!--<div class="row justify-content-center">			
 					<div class="col-12 col-md-12">
 						<div class="card">
 							<div class="card-body fade-in">
-							<h2 class="thisweeksmenu"><span class="notThisWeek">no bakeday this sunday!</span></h2>
+							<h2 class="thisweeksmenu">menu for Sunday 8/14: <span class="notThisWeek">sold out!</span></h2>
 		    					
-								<p class="card-text">I'm sleeping in this Sunday but you can sign up for the mailing list below to be the first to know next time Bakeday is happening!</p>
+								<p class="card-text">You missed it this time but bakeday will be back soon! Sign up for the mailing list below to be the first to know next time it's happening!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 								<div id="mc_embed_signup">
 								<form action="https://github.us20.list-manage.com/subscribe/post?u=d8ad137324977f3a975bc2711&amp;id=b2be11a859" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -690,7 +708,7 @@
 							</div>
 						</div>
 					</div>
-				</div>		
+				</div>-->	
 				<!--<div class="row justify-content-center">			
 					<div class="col-12 col-md-12">
 						<div class="card">
@@ -784,5 +802,6 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly" async></script>
 	</body>
 </html>
+
 
 
