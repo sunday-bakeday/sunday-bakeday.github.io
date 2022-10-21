@@ -282,7 +282,7 @@
 		.mc-field-group {
 		    display: inline-block;
 		}
-		#mc_embed_signup input.email {
+		#mc_embed_signup input.email, #pac-input {
 			font-size: 15px;
 			border: none;
 			-webkit-border-radius: 3px;
@@ -297,6 +297,10 @@
 			margin: 0;
 			width: 350px;
 			vertical-align: top;
+		}
+		#pac-input {
+			width: 75%;
+			text-align: center;
 		}
 		#mc_embed_signup label {
 			display: block;
@@ -391,6 +395,15 @@
 			}
 		.yellow {
 			color: #fed101;
+		}
+		.collapse {
+			border: 2px solid #f8d320;
+			border-radius: 15px;
+			padding: 0.5rem;
+			color: #f8d320;
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 1.2rem;
+			background: #3000d0;
 		}
 		@media (min-width: 992px) {
 		    h1 {
@@ -564,36 +577,38 @@ styles: [
 	polygon.setMap(map);	
 	  
 	var input = document.getElementById('pac-input');
-        var types = document.getElementById('type-selector');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+	autocomplete.addListener('place_changed', function() {
+	marker.setMap(null);
+	var place = autocomplete.getPlace();
+	var newBounds = new google.maps.LatLngBounds(bounds.getCenter(), bounds.getCenter()); //Changed
 
-        var autocomplete = new google.maps.places.Autocomplete(input);
-        autocomplete.addListener('place_changed', function() {
-		marker.setMap(null);
-		var place = autocomplete.getPlace();
-		var newBounds = new google.maps.LatLngBounds(bounds.getSouthWest(), bounds.getNorthEast()); //Changed
-		// removed newBounds = bounds;
-          if (!place.geometry) {
-						geocodeAddress(input.value);//Added on 27/09/2016          
-            //window.alert("Autocomplete's returned place contains no geometry");
-            return;
-          };
-		  marker.setPosition(place.geometry.location);
-		  marker.setMap(map);
-		  newBounds.extend(place.geometry.location);
-		  map.fitBounds(newBounds);
-		  if (google.maps.geometry.poly.containsLocation(place.geometry.location, polygon)){
-			alert('The area contains the address');  
-		  } else {
-			alert('The address is outside of the area.');  
-		  };
-	   });
+	  if (!place.geometry) {
+		geocodeAddress(input.value);        
+		return;
+	  };
+	  marker.setPosition(place.geometry.location);
+	  marker.setMap(map);
+	  newBounds.extend(place.geometry.location);
+	  map.fitBounds(newBounds);
+	  if (google.maps.geometry.poly.containsLocation(place.geometry.location, polygon)){
+		//alert('The area contains the address');  
+		document.getElementById("collapseSuccess").style.display = "none";
+		document.getElementById("collapseFail").style.display = "none";
+		document.getElementById("collapseSuccess").style.display = "block";
+	  } else {
+		document.getElementById("collapseSuccess").style.display = "none";
+		document.getElementById("collapseFail").style.display = "none";
+		document.getElementById("collapseFail").style.display = "block";
+	  };
+   });
 }
 //Added on 27/09/2016
 //*************************
 function geocodeAddress(addr) {
 	geocoder.geocode({'address': addr}, function(results, status) {
 	  if (status === 'OK') {
-  		var newBounds = new google.maps.LatLngBounds(bounds.getSouthWest(), bounds.getNorthEast());
+  		var newBounds = new google.maps.LatLngBounds(bounds.getCenter(), bounds.getCenter());
 		  marker.setPosition(results[0].geometry.location);
 		  marker.setMap(map);
 		  newBounds.extend(results[0].geometry.location);
@@ -767,7 +782,9 @@ function geocodeAddress(addr) {
 							<h4>"I live on the Mongolian steppe - will you deliver pastries to me?"</h4>
 							<p class="answer">No. Grand Rapids area only, please. If you live in the purple area below we're cool. If you live outside of the delivery area, you're welcome to pick them up from Bakeday Towers in the Creston Heights area. <a href="mailto:orders@sundaybakeday.com">Message me!</a></p>
 						</div>
-						 <input id="pac-input" class="controls" type="text" placeholder="Enter your address">	
+						 <input id="pac-input" onClick="this.select();" class="controls mb-3" type="text" placeholder="Enter your address to make sure you're in the delivery zone!">
+						<div class="collapse mb-3" id="collapseSuccess">Hooray! You're in the delivery zone!</div>
+						<div class="collapse mb-3" id="collapseFail">Oh no! You live too far away. You're welcome to order and pick up though!</div>
 						<div class="mb-3" id="map"></div>
 						<div class="mb-3">
 							<h4>"My nephew is being released from prison after serving 20 years for a crime he didn't commit. Will you bake some pastries for the party?"</h4>
