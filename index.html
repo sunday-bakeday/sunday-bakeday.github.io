@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -27,6 +28,7 @@
 		<meta property="og:title" content="Sunday Bakeday" />
 		<!-- Global cooliodude  bums tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHEVQK4VSF"></script>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly&libraries=places"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
@@ -280,7 +282,7 @@
 		.mc-field-group {
 		    display: inline-block;
 		}
-		#mc_embed_signup input.email {
+		#mc_embed_signup input.email, #address-one {
 			font-size: 15px;
 			border: none;
 			-webkit-border-radius: 3px;
@@ -295,6 +297,10 @@
 			margin: 0;
 			width: 350px;
 			vertical-align: top;
+		}
+		#address-one {
+			width: 75%;
+			text-align: center;
 		}
 		#mc_embed_signup label {
 			display: block;
@@ -390,6 +396,14 @@
 		.yellow {
 			color: #fed101;
 		}
+		.collapse {
+			border-radius: 15px;
+			padding: 0.5rem;
+			color: #fb37f3;
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 1.2rem;
+			background: #fed101;
+		}
 		@media (min-width: 992px) {
 		    h1 {
 				font-size: 5rem;
@@ -428,12 +442,21 @@
 			.notthisweek {
 				display: block;
 			}
+			#address-one {
+				width: 100%;
+			}
 		}	
 		</style>
 		<script>
+		var map;
+		var geocoder; //Added on 27/09/2016
+		var marker;
+		var polygon;
+		var bounds;
+
 		function initMap() {
-  			const map = new google.maps.Map(document.getElementById("map"), {
-    			zoom: 11,
+			map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 11,
 				center: { lat: 42.963360, lng: -85.644000 },
 				mapTypeId: "roadmap",
 				disableDefaultUI: true, // a way to quickly hide all controls
@@ -443,73 +466,81 @@
 				keyboardShortcuts: false,
 				controlSize: 20,
 				styles: [
-					{
-						"featureType": "all",
-						"elementType": "labels.text",
-						"stylers": [
 							{
-								"visibility": "off"
-							}
-						]
-					},
-					{
-						"featureType": "all",
-						"elementType": "labels.icon",
-						"stylers": [
-							{
-								"visibility": "off"
-							}
-						]
-					},
-					{
-						"featureType": "administrative",
-						"elementType": "labels",
-						"stylers": [
-							{
-								"visibility": "simplified"
-							}
-						]
-					},
-					{
-						"featureType": "administrative",
-						"elementType": "labels.text.fill",
-						"stylers": [
-							{
-								"saturation": "-28"
+								"featureType": "all",
+								"elementType": "labels.text",
+								"stylers": [
+									{
+										"visibility": "off"
+									}
+								]
 							},
 							{
-								"lightness": "16"
-							}
-						]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.fill",
-						"stylers": [
-							{
-								"visibility": "on"
+								"featureType": "all",
+								"elementType": "labels.icon",
+								"stylers": [
+									{
+										"visibility": "off"
+									}
+								]
 							},
 							{
-								"color": "#fed101"
-							}
-						]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.stroke",
-						"stylers": [
-							{
-								"visibility": "on"
+								"featureType": "administrative",
+								"elementType": "labels",
+								"stylers": [
+									{
+										"visibility": "simplified"
+									}
+								]
 							},
 							{
-								"lightness": "71"
+								"featureType": "administrative",
+								"elementType": "labels.text.fill",
+								"stylers": [
+									{
+										"saturation": "-28"
+									},
+									{
+										"lightness": "16"
+									}
+								]
+							},
+							{
+								"featureType": "road.highway",
+								"elementType": "geometry.fill",
+								"stylers": [
+									{
+										"visibility": "on"
+									},
+									{
+										"color": "#fed101"
+									}
+								]
+							},
+							{
+								"featureType": "road.highway",
+								"elementType": "geometry.stroke",
+								"stylers": [
+									{
+										"visibility": "on"
+									},
+									{
+										"lightness": "71"
+									}
+								]
 							}
 						]
-					}
-				]
-  			});
-	
-			const triangleCoords = [
+			});
+			var center = new google.maps.LatLng(41.3899621, 2.1469796);
+			geocoder = new google.maps.Geocoder();
+			bounds = new google.maps.LatLngBounds();
+			google.maps.event.addListenerOnce(map, 'tilesloaded', function(evt) { 
+				bounds = map.getBounds();
+			});
+			marker = new google.maps.Marker({
+				position: center
+			});
+			var area= [
 				{ lat: 43.01532741040676, lng: -85.74420160591976 },
 				{ lat: 42.986075717540764, lng: -85.74420160591976 },
 				{ lat: 42.95718699758786, lng: -85.7436866217889 },
@@ -534,19 +565,37 @@
 				{ lat: 43.0287290741364, lng: -85.58324929882568 },
 				{ lat: 43.02951335953451, lng: -85.66989537884277 },
 				{ lat: 43.01517503971821, lng: -85.6773197333959 }
-		  	];
-
-			const bermudaTriangle = new google.maps.Polygon({
-				paths: triangleCoords,
+			];
+			polygon = new google.maps.Polygon({
+				paths: area,
 				strokeColor: "#FC01F3",
 				strokeOpacity: 0.8,
 				strokeWeight: 2,
 				fillColor: "#FC01F3",
 				fillOpacity: 0.25,
-			});	
-  
-  			bermudaTriangle.setMap(map);
-		}		
+			});
+			polygon.setMap(map);	
+			var input = document.getElementById('address-one');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			autocomplete.addListener('place_changed', function() {
+				marker.setMap(null);
+				var place = autocomplete.getPlace();
+				var newBounds = new google.maps.LatLngBounds(bounds.getCenter(), bounds.getCenter());
+				marker.setPosition(place.geometry.location);
+				marker.setMap(map);
+				newBounds.extend(place.geometry.location);
+				map.fitBounds(newBounds);
+				if (google.maps.geometry.poly.containsLocation(place.geometry.location, polygon)){ 
+					document.getElementById("collapseSuccess").style.display = "none";
+					document.getElementById("collapseFail").style.display = "none";
+					document.getElementById("collapseSuccess").style.display = "block";
+				} else {
+					document.getElementById("collapseSuccess").style.display = "none";
+					document.getElementById("collapseFail").style.display = "none";
+					document.getElementById("collapseFail").style.display = "block";
+				};
+			});
+		}
 		</script>
 	</head>
 	<body>
@@ -619,6 +668,7 @@
 							<div class="card-body fade-in menuItem">
 								<h4>#4 choco-no-nut cookie</h4>
 								<p class="card-text">A big, chewy chocolate chip cookie with coconut flakes in the background and NO NUTS. People really lose their minds for this cookie.</p>
+							</div>
 						</div>
 					</div>			
 				</div>
@@ -628,18 +678,19 @@
 						<div class="card">
 							<div class="card-body fade-in">
 							<h2 class="thisweeksmenu"><span class="notThisWeek">no bakeday this week!</span></h2>
-		    					
 								<p class="card-text">I'm sleeping in this Sunday but you can sign up for the mailing list below to be the first to know next time Bakeday is happening!</p>
 								<div class="d-flex justify-content-between align-items-center"></div>
 								<div id="mc_embed_signup">
 									<form action="https://github.us20.list-manage.com/subscribe/post?u=d8ad137324977f3a975bc2711&amp;id=b2be11a859" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    										<div id="mc_embed_signup_scroll">
+    									<div id="mc_embed_signup_scroll">
 											<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    											<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8ad137324977f3a975bc2711_b2be11a859" tabindex="-1" value=""></div>
-        											<div class="clear foot">
-           												<input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-       												</div>
-    											</div>
+											<div style="position: absolute; left: -5000px;" aria-hidden="true">
+												<input type="text" name="b_d8ad137324977f3a975bc2711_b2be11a859" tabindex="-1" value="">
+											</div>
+											<div class="clear foot">
+												<input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+											</div>
+										</div>
 									</form>
 								</div>								
 							</div>
@@ -699,8 +750,11 @@
 					<div class="mb-0 faqs">
 						<div class="mb-3">
 							<h4>"I live on the Mongolian steppe - will you deliver pastries to me?"</h4>
-							<p class="answer">No. Grand Rapids area only, please. If you live in the purple area below we're cool. If you live outside of the delivery area, you're welcome to pick them up from Bakeday Towers in the Creston Heights area. <a href="mailto:orders@sundaybakeday.com">Message me!</a></p>
+							<p class="answer">No. Grand Rapids area only, please. If you live in the purple area below we're cool. If you live outside of the delivery area, you're welcome to pick them up from Bakeday Towers in the Creston Heights area. <a href="mailto:orders@sundaybakeday.com">Message me!</a></p><p class="fw-bold">Enter your address below to make sure you're in the delivery zone!</p>
 						</div>
+						<input id="address-one" onClick="this.select();" class="controls mb-3" placeholder="Enter your address" autocomplete="off" type="text">
+						<div class="collapse mb-3" id="collapseSuccess">Hooray! You're in the delivery zone!</div>
+						<div class="collapse mb-3" id="collapseFail">Oh no! You live too far away. You're welcome to order and pick up though!</div>
 						<div class="mb-3" id="map"></div>
 						<div class="mb-3">
 							<h4>"My nephew is being released from prison after serving 20 years for a crime he didn't commit. Will you bake some pastries for the party?"</h4>
@@ -778,7 +832,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly" async></script>
+		
 	</body>
 </html>
-
