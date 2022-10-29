@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- 1023 sold out -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KNGRG65');</script>
+		<!-- End Google Tag Manager -->	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sunday Bakeday</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" src="/css/animate.css" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Open+Sans&display=swap" rel="stylesheet">
+		<meta property="og:image" content="http://www.sundaybakeday.com/sb.jpg" />
+		<meta property="og:description" content="Fresh-baked pastries delivered on Sunday morning. Mix and match 4 for $20. Grand Rapids, MI." />
+		<meta property="og:url" content="http://www.sundaybakeday.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Sunday Bakeday" />
+		<!-- Global cooliodude  bums tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHEVQK4VSF"></script>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnGd-MaeP0IlSu2G2dc7hlsx0Sy2GVUg&callback=initMap&v=weekly&libraries=places"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-GHEVQK4VSF');
+		</script>		
+		<style>
+		html, body {
+			line-height: 1.3;
+			font-size: 1rem;
+			color: #FFF;
+			font-family: 'Open Sans', sans-serif;
+		}
+		a {
+		    color: #FFF;
+		    text-decoration: underline;
+		}	
+		a:hover {
+		     text-decoration: none;
+		     color: #003adf;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Fredoka One', sans-serif;
+			line-height: 1.3;
+		}
+		 h1 {
+		    font-size: 2.4rem;
+		}
+		 h2 {
+		    font-size: 2rem;
+			color: #fed101;
+		}
+		h4 {
+			font-size: 1.2rem;
+		}
+		.faqs h4 {
+			color: #fed101;
+			}
+		.lead {
+		    font-size: 1.2rem;
+			color: #FFF;
+		}
+		.notThisWeek {
+			color: #fff;
+			animation-duration: 900ms;
+			animation-name: blink;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes blink {
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0.5;
+			}
+		}
+
+	    .logo {
+			width: 130px;
+	    }			
+		.top {
+			width: 100%;
+			margin: 0 auto;
+			background: #FC01F3;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+		h2.thisweeksmenu {
+		    font-size: 2rem;
+                    color: #FFF;
+		}
+		.top {
+			background-image: linear-gradient(178deg, #FC01F3 85%, #fed101 calc(85% + 2px));
+			padding-bottom: 75px;
+			margin-bottom: 0;
+		}
+
+		.card-body {
+			background: #FC01F3;
+			color: #fff;
+			padding: 0.8rem;
+			transform: rotate(0deg);
+			border-radius: 15px;
+		}
+		.card-body.menuItem {
+			min-height: 124px;
+		}
+		.card-text {
+		    font-size: 1rem;
+		    font-family: 'Open Sans', sans-serif;
+			margin-bottom: 0.5rem;
+		}
+		.card {
+		    border: none;
+		    margin-bottom: 1rem;
+		    background-color: transparent;
+		}
+		ol {
+		    list-style-position: inside;
+		    padding-left: 0;
+			color: #fed101;
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 1.2rem;
+		}
+		ol span {
+		     color: #FFF;
+			 
+		}
+		ol span.note {
+			font-family: 'Open Sans', sans-serif;
+		}
+		hr {
+			background: #fed101;
+			min-height: 5px;
+			border-radius: 3px;
+			color: #fed101;
+			opacity: 1;
+			margin: auto;
+		}
+		.pill {
+			display: block;
+			font-size: 14px;
+			padding: 5px 0;
+			color: #fff;
+			font-family: 'Open Sans', sans-serif;
+			border: 3px solid #FFF;
+			border-radius: 40px;
+			background: #FFF;
+			color: #FC01F3;
+			text-decoration: none;
+		}
+		.pill:hover {
+			color: #FC01F3;
+			text-decoration: underline;
+			background: #FED101;
+		}
+		.pill a:hover {
+			color: #fff;
+		}
+		p.note {
+			font-size: 1rem;
+			font-style: italic;
+			font-family: 'Open Sans', sans-serif;
+			color: #FFF;
+			margin-bottom: 0.5rem;
+			padding-top: 0.25rem;
+		}
+		.pillTitle {
+			font-size: 1rem;
+			font-family: 'Fredoka One', sans-serif;
+		}
+		.bottomWrapper {
+			background-image: linear-gradient(182deg, #fed101 3%, #FC01F3 calc(3% + 2px));
+                        padding-top: 20px;
+		}
+		.fade-in {
+			animation: fadeIn 1s;
+			-webkit-animation: fadeIn 1s;
+			-moz-animation: fadeIn 1s;
+			-o-animation: fadeIn 1s;
+			-ms-animation: fadeIn 1s;
+		}
+		.infoLink {
+		    text-decoration: none;
+		}
+		.infoLink:hover {
+		    text-decoration: underline;
+		}
+		.infoLink span {
+		    font-family: 'Open Sans', sans-serif;
+		}
+		.album {
+		    background-color: #fed101;
+		}
+		.badge {
+		    z-index: 1;
+		    top: -5px;
+		    left: 10%;
+		    background: #0B43E0;
+		}
+		.insta-box {
+			position: relative;
+			}
+		.overlay {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;		
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+		}
+		.insta-box:hover .overlay {
+			opacity: 1;
+		}		
+		@keyframes fadeIn {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		@-moz-keyframes fadeIn {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		@-webkit-keyframes fadeIn {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		@-o-keyframes fadeIn {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		@-ms-keyframes fadeIn {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		#mc_embed_signup{
+		    clear:left;
+		    width:100%;
+		}
+		#mc_embed_signup form {
+		    text-align:center;
+		    padding:10px 0 10px 0;
+		}
+		.mc-field-group {
+		    display: inline-block;
+		}
+		#mc_embed_signup input.email, #address-one {
+			font-size: 15px;
+			border: none;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			color: #343434;
+			background-color: #fff;
+			box-sizing: border-box;
+			height: 32px;
+			padding: 0px 0.4em;
+			display: inline-block;
+			margin: 0;
+			width: 350px;
+			vertical-align: top;
+		}
+		#address-one {
+			width: 75%;
+			text-align: center;
+		}
+		#mc_embed_signup label {
+			display: block;
+			font-size: 16px;
+			padding-bottom: 10px;
+			font-weight: bold;
+		}
+		#mc_embed_signup .clear {
+		    display: inline-block;
+		}
+		/* positions button horizontally in line with input */
+		#mc_embed_signup .foot {
+			display: inline;
+			width: 100%;
+			height: 32px;
+			align-items: center;
+		}
+		@media screen and (max-width:400px) {
+		    #mc_embed_signup .referralBadge {
+				width: 50%;
+		    }
+		}
+		#mc_embed_signup .optionalParent {
+		    display: inline-block;
+		}
+		#mc_embed_signup .button {
+			font-size: 13px;
+			border: none;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			letter-spacing: .03em;
+			color: #FC01F3;
+			background-color: #FED101;
+			box-sizing: border-box;
+			height: 32px;
+			line-height: 32px;
+			padding: 0 18px;
+			display: inline-block;
+			margin: 0;
+			transition: all 0.23s ease-in-out 0s;
+			font-weight: bold;
+		}
+		#mc_embed_signup .button:hover {
+			background-color: #1F48D6;
+			cursor: pointer;
+			color: #FFF;
+		}
+		#mc_embed_signup div#mce-responses {
+			float: left;
+			top: -1.4em;
+			padding: 0em .5em 0em .5em;
+			overflow: hidden;
+			width: 90%;
+			margin: 0 5%;
+			clear: both;
+		}
+		#mc_embed_signup div.response {
+			margin: 1em 0;
+			padding: 1em .5em .5em 0;
+			font-weight: bold;
+			float: left;
+			top: -1.5em;
+			z-index: 1;
+			width: 80%;
+		}
+		#mc_embed_signup #mce-error-response {
+		    display: none;
+		}
+		#mc_embed_signup #mce-success-response {
+		    color: #529214;
+		    display: none;
+		}
+		#mc_embed_signup label.error {
+		    display: block;
+		    float: none;
+		    width: auto;
+		    margin-left: 1.05em;
+		    text-align: left;
+		    padding: .5em 0;
+		}
+		svg {
+			position: relative;
+			top: -1px;
+		}
+		#map {
+		  	height: 320px;
+			border-radius: 1rem;
+		}
+		.pink {
+			color: #fb37f3 !important;
+			}
+		.yellow {
+			color: #fed101;
+		}
+		.collapse {
+			border-radius: 15px;
+			padding: 0.5rem;
+			color: #fb37f3;
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 1.2rem;
+			background: #fed101;
+		}
+		@media (min-width: 992px) {
+		    h1 {
+				font-size: 5rem;
+		    }
+		    h2 {
+				font-size: 3.5rem;
+		    }
+
+			.card-body h2 {
+				font-size: 1rem;
+		    }
+			h2.thisweeksmenu {
+				font-size: 3rem;
+			}
+		
+		}			
+		@media (max-width: 768px) {
+			.card-body.menuItem {
+				min-height: 0;
+			}
+		    #mc_embed_signup input.email {
+				width: 100%;
+				margin-bottom: 5px;
+		    }
+		    #mc_embed_signup .clear {
+				display: block;
+				width: 100% 
+		    }
+			#mc_embed_signup .button {
+				width: 100%;
+				margin: 0;
+		    }
+			.bottomWrapper {
+				background-image: linear-gradient(182deg, #fed101 2%, #FC01F3 calc(2% + 2px));
+		    }
+			.notthisweek {
+				display: block;
+			}
+			#address-one {
+				width: 100%;
+			}
+		}	
+		</style>
+		<script>
+		var map;
+		var geocoder; //Added on 27/09/2016
+		var marker;
+		var polygon;
+		var bounds;
+
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 11,
+				center: { lat: 42.963360, lng: -85.644000 },
+				mapTypeId: "roadmap",
+				disableDefaultUI: true, // a way to quickly hide all controls
+				mapTypeControl: false,
+				scaleControl: true,
+				zoomControl: true,
+				keyboardShortcuts: false,
+				controlSize: 20,
+				styles: [
+							{
+								"featureType": "all",
+								"elementType": "labels.text",
+								"stylers": [
+									{
+										"visibility": "off"
+									}
+								]
+							},
+							{
+								"featureType": "all",
+								"elementType": "labels.icon",
+								"stylers": [
+									{
+										"visibility": "off"
+									}
+								]
+							},
+							{
+								"featureType": "administrative",
+								"elementType": "labels",
+								"stylers": [
+									{
+										"visibility": "simplified"
+									}
+								]
+							},
+							{
+								"featureType": "administrative",
+								"elementType": "labels.text.fill",
+								"stylers": [
+									{
+										"saturation": "-28"
+									},
+									{
+										"lightness": "16"
+									}
+								]
+							},
+							{
+								"featureType": "road.highway",
+								"elementType": "geometry.fill",
+								"stylers": [
+									{
+										"visibility": "on"
+									},
+									{
+										"color": "#fed101"
+									}
+								]
+							},
+							{
+								"featureType": "road.highway",
+								"elementType": "geometry.stroke",
+								"stylers": [
+									{
+										"visibility": "on"
+									},
+									{
+										"lightness": "71"
+									}
+								]
+							}
+						]
+			});
+			var center = new google.maps.LatLng(41.3899621, 2.1469796);
+			geocoder = new google.maps.Geocoder();
+			bounds = new google.maps.LatLngBounds();
+			google.maps.event.addListenerOnce(map, 'tilesloaded', function(evt) { 
+				bounds = map.getBounds();
+			});
+			marker = new google.maps.Marker({
+				position: center
+			});
+			var area= [
+				{ lat: 43.01532741040676, lng: -85.74420160591976 },
+				{ lat: 42.986075717540764, lng: -85.74420160591976 },
+				{ lat: 42.95718699758786, lng: -85.7436866217889 },
+				{ lat: 42.91885711583546, lng: -85.74454492867366 },
+				{ lat: 42.897608318438856, lng: -85.74385828316585 },
+				{ lat: 42.89735680952524, lng: -85.70437616646663 },
+				{ lat: 42.89748256411025, lng: -85.64583963692561 },
+				{ lat: 42.897575618382334, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.56751103714721 },
+				{ lat: 42.91216138786569, lng: -85.56802602127807 },
+				{ lat: 42.91190993831881, lng: -85.5287155659558 },
+				{ lat: 42.92108718213047, lng: -85.52991719559448 },
+				{ lat: 42.92133859423217, lng: -85.53884358719604 },
+				{ lat: 42.94899344926061, lng: -85.53930398632568 },
+				{ lat: 42.963064568340236, lng: -85.53964730907958 },
+				{ lat: 42.963567048799156, lng: -85.54393884350341 },
+				{ lat: 42.97072694940378, lng: -85.54479715038818 },
+				{ lat: 42.97072694940378, lng: -85.55990335156005 },
+				{ lat: 42.98516982601827, lng: -85.55904504467529 },
+				{ lat: 42.985420976468895, lng: -85.58359262157958 },
+				{ lat: 43.0287290741364, lng: -85.58324929882568 },
+				{ lat: 43.02951335953451, lng: -85.66989537884277 },
+				{ lat: 43.01517503971821, lng: -85.6773197333959 }
+			];
+			polygon = new google.maps.Polygon({
+				paths: area,
+				strokeColor: "#FC01F3",
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: "#FC01F3",
+				fillOpacity: 0.25,
+			});
+			polygon.setMap(map);	
+			var input = document.getElementById('address-one');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			autocomplete.addListener('place_changed', function() {
+				marker.setMap(null);
+				var place = autocomplete.getPlace();
+				var newBounds = new google.maps.LatLngBounds(bounds.getCenter(), bounds.getCenter());
+				marker.setPosition(place.geometry.location);
+				marker.setMap(map);
+				newBounds.extend(place.geometry.location);
+				map.fitBounds(newBounds);
+				if (google.maps.geometry.poly.containsLocation(place.geometry.location, polygon)){ 
+					document.getElementById("collapseSuccess").style.display = "none";
+					document.getElementById("collapseFail").style.display = "none";
+					document.getElementById("collapseSuccess").style.display = "block";
+				} else {
+					document.getElementById("collapseSuccess").style.display = "none";
+					document.getElementById("collapseFail").style.display = "none";
+					document.getElementById("collapseFail").style.display = "block";
+				};
+			});
+		}
+		</script>
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNGRG65"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+		<div class="top text-center">
+			<div class="px-2 pt-4 fade-in">
+				<a href="https://www.instagram.com/sunday.bakeday/"><img class="logo d-block mx-auto" src="https://sundaybakeday.com/newlogoweb2.png" alt="Sunday Bakeday logo"></a>
+				<h1>sunday bakeday</h1>
+				<div class="col-lg-8 mx-auto">
+					<h2 class="lead mb-2 d-none d-sm-block">Fresh-baked pastries delivered on occasional Sunday mornings. Mix and match 4 for $20. <br>Grand Rapids, MI.</h2>
+					<h2 class="lead mb-2 d-block d-sm-none">Fresh-baked pastries delivered on occasional Sunday mornings. Mix and match 4 for $20. Grand Rapids, MI.</h2>
+				</div>
+			</div>
+		</div>
+		<div class="album text-center">
+			<div class="container">
+				<div class="row justify-content-center ">
+					<h2 class="thisweeksmenu pink pb-2">menu for Sunday Dec 4</h2>
+					<div class="col-12 col-md-4">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+		    					<h4>#1 cardamom croissant bun</h4>
+								<p class="card-text">test 2</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+								<h4>#2 blueberry scone</h4>
+								<p class="card-text">test 2</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="row justify-content-center ">
+					<div class="col-12 col-md-4">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+								<h4>#3 jalapeno scone</h4>
+								<p class="card-text">test 2</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="card">
+							<div class="card-body fade-in menuItem">
+								<h4>#4 choco-no-nut cookie</h4>
+								<p class="card-text">test 2</p>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>			
+		</div>
+		<div class="bottomWrapper">
+			<div class="container">
+				<div class="bottom pt-5">
+					<div class="pb-4 col-md-12 mx-auto text-center">
+						<h2 class="">how it works</h2>
+						<ol class="mb-0 howitworks text-center">
+							<li class="py-2">
+								<span>Make sure you definitely live in Grand Rapids.</span>
+								<p class="note">There's a map of my delivery zone below.</p>
+							</li>
+							<li class="py-2">
+								<span>Pick any combination of 4 pastries and send me $20.</span>
+								<p class="note">Include your order and address in the message with your payment! Also tell me what buzzer to press if you live in a condo or whatever.</p>
+							</li>
+							<li class="py-2">
+								<span>A box of pastries will be delivered to you on Sunday morning before 10am.</span>
+							</li>
+						</ol>
+					</div>
+				</div> 
+				<hr class="col-2">
+				<div class="pb-3">
+					<div class="py-4 col-md-12 col-lg-8 mx-auto text-center">
+						<h2 class="">order now</h2>
+						<div class="container">
+							<div class="row justify-content-md-center">
+								<div class="col-xs-12 col-md-4 mb-2">
+									<a class="pill" href="https://venmo.com/sundaybakeday" id="venmoPill">
+										<span class="pillTitle mb-0">Venmo</span>
+										<br/>
+										<span>@sundaybakeday</span>
+									</a>
+								</div>
+								<div class="col-xs-12 col-md-4 mb-2">
+									<a class="pill" href="https://cash.app/sundaybakeday" id="cashPill">
+										<span class="pillTitle mb-0">CashApp</span>
+										<br/>
+										<span>$sundaybakeday</span>
+									</a>
+								</div>												
+							</div>
+							<p class="mb-0 pt-3 answer font-italic"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 20 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>Venmo and CashApp transactions are private.</p>
+						</div>
+					</div>
+				</div>
+				<hr class="col-2">
+				<div class="py-4 col-md-10 col-lg-8 mx-auto text-center">
+					<h2>faqs</h2>
+					<div class="mb-0 faqs">
+						<div class="mb-3">
+							<h4>"I live on the Mongolian steppe - will you deliver pastries to me?"</h4>
+							<p class="answer">No. Grand Rapids area only, please. If you live in the purple area below we're cool. If you live outside of the delivery area, you're welcome to pick them up from Bakeday Towers in the Creston Heights area. <a href="mailto:orders@sundaybakeday.com">Message me!</a></p><p class="fw-bold">Enter your address below to make sure you're in the delivery zone!</p>
+						</div>
+						<input id="address-one" onClick="this.select();" class="controls mb-3" placeholder="Enter your address here" autocomplete="off" type="text">
+						<div class="collapse mb-3" id="collapseSuccess">Hooray! You're in the delivery zone!</div>
+						<div class="collapse mb-3" id="collapseFail">Oh no! You live too far away. You're welcome to order and pick up though!</div>
+						<div class="mb-3" id="map"></div>
+						<div class="mb-3">
+							<h4>"My nephew is being released from prison after serving 20 years for a crime he didn't commit. Will you bake some pastries for the party?"</h4>
+							<p class="answer">Probably, if I have time. <a href="mailto:orders@sundaybakeday.com">Email me!</a></p>
+						</div>	
+						<div class="mb-3">
+							<h4>"Does bakeday happen every Sunday?"</h4>
+							<p class="answer">No. I have stuff to do and I'm quite lazy. I try to do it every couple of weeks! <a href="http://eepurl.com/hS8rsf">Click here</a> to get an email next time bakeday is happening!</p>
+						</div>	
+						<div class="mb-3">
+							<h4>"Can you tell me EXACTLY what time my pastries will be delivered?"</h4>
+							<p class="answer">Not really but if you ask nicely I'll do my best to give you a ballpark time based on how my delivery route shakes out.</p>
+						</div>							
+						<div class="mb-3">
+							<h4>"I use Venmo like twice a year to pay my babysitter or whatever. How do I order with Venmo?"</h4>
+							<p class="answer">It's easy! Just send $20 plus an extravagant tip to <a href="https://venmo.com/sundaybakeday">@sunday.bakeday</a> and include your order and address in the message. Here's an example of a typical order:</p>
+							<p style="font-style: italic;">"#1 #3 #4 #5 please! 420 Diamond Ave SE. Please leave at the side door. Thanks! I love you."</p>
+						</div>							
+						<div class="mb-3">
+							<h4>"I'm from the 1950s and don't have Venmo or CashApp. Do you take cash?"</h4>
+							<p class="answer">Absolutely. Send me your order on <a href="https://www.instagram.com/sunday.bakeday/">Instagram</a> or by <a href="mailto:orders@sundaybakeday.com">email</a>. Just bear in mind that you'll have to get your ass out of bed on Sunday morning to pay me.</p>
+						</div>							
+					</div>
+				</div>
+				<hr class="col-2">
+				<div class="container pt-5">		
+					<div class="row justify-content-center ">				
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+							<a href="https://www.instagram.com/p/CdBj-y-OziC/">
+								<img src="https://i.imgur.com/KlF6Qs3.jpg" class="img-thumbnail" alt="Great content.">
+								<span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+							</a>
+						</div>
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+							<a href="https://www.instagram.com/p/CalRoxsrRtg/">
+								<img src="https://i.imgur.com/H7yOZ0s.jpg" class="img-thumbnail" alt="Great content.">
+								<span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+							</a>
+						</div>
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+							<a href="https://www.instagram.com/p/CekNLBirVyM/">
+								<img src="https://i.imgur.com/RHrn89k.jpg" class="img-thumbnail" alt="Great content.">
+								<span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+							</a>
+						</div>
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+                            <a href="https://www.instagram.com/p/CdZW8wzrY2e/">
+                                <img src="https://i.imgur.com/nPxusMT.jpg" class="img-thumbnail" alt="Great content.">
+                                <span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+                            </a>
+                        </div>
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+                            <a href="https://www.instagram.com/p/Cd3Oe3OL-Z9/?utm_source=ig_web_copy_link">
+                                <img src="https://i.imgur.com/vrq8SZF.jpg" class="img-thumbnail" alt="Great content.">
+                                <span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+                             </a>
+                        </div>
+						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
+							<a href="https://www.instagram.com/p/Cdlv1aXO-05/">
+								<img src="https://i.imgur.com/D0iqKLk.jpg" class="img-thumbnail" alt="Great content.">
+								<span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+							</a>
+						</div>						
+					</div>	
+				</div>
+				<div class="pb-5">
+					<div class="py-4 col-md-7 mx-auto text-center">
+						<h2 class="">contact</h2>
+						<div class="mb-0 contact text-center">
+							<p class="mb-5">The best way to get in touch is probably to <a href="https://www.instagram.com/sunday.bakeday/">message me on Instagram</a> or <a href="mailto:orders@sundaybakeday.com">email me</a>.</p>
+							<a href="https://www.instagram.com/sunday.bakeday/"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="36"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
