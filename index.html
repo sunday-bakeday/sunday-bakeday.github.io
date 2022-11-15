@@ -470,7 +470,7 @@
 								"elementType": "labels.text",
 								"stylers": [
 									{
-										"visibility": "on"
+										"visibility": "off"
 									}
 								]
 							},
@@ -540,23 +540,30 @@
 				position: center
 			});
 			var area= [
-				{lat:42.898603767624046, lng:-85.74410813067858},
-				{lat:42.89784924998635, lng:-85.62591927264636},
-				{lat:42.90501679477509, lng:-85.62626259540026},
-				{lat:42.90501679477509, lng:-85.5675544044823},
-				{lat:42.91218350630492, lng:-85.56806938861315},
-				{lat:42.912497816683064, lng:-85.52893059466784},
-				{lat:42.92098359097568, lng:-85.52927391742175},
-				{lat:42.920795030909126, lng:-85.53914444659655},
-				{lat:42.96414864846049, lng:-85.53991692279284},
-				{lat:42.96427426674638, lng:-85.56025879596179},
-				{lat:42.98524892218113, lng:-85.56068794940417},
-				{lat:43.013685152093984, lng:-85.56120293353503},
-				{lat:43.01374791067037, lng:-85.58944123004382},
-				{lat:43.028494397669256, lng:-85.58926956866686},
-				{lat:43.02937280000014, lng:-85.66986458514636},
-				{lat:43.01481004829116, lng:-85.67716210058799},
-				{lat:43.0156258898376, lng:-85.74359505346885}
+				{ lat: 43.01532741040676, lng: -85.74420160591976 },
+				{ lat: 42.986075717540764, lng: -85.74420160591976 },
+				{ lat: 42.95718699758786, lng: -85.7436866217889 },
+				{ lat: 42.91885711583546, lng: -85.74454492867366 },
+				{ lat: 42.897608318438856, lng: -85.74385828316585 },
+				{ lat: 42.89735680952524, lng: -85.70437616646663 },
+				{ lat: 42.89748256411025, lng: -85.64583963692561 },
+				{ lat: 42.897575618382334, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.62639088944213 },
+				{ lat: 42.90486893450011, lng: -85.56751103714721 },
+				{ lat: 42.91216138786569, lng: -85.56802602127807 },
+				{ lat: 42.91190993831881, lng: -85.5287155659558 },
+				{ lat: 42.92108718213047, lng: -85.52991719559448 },
+				{ lat: 42.92133859423217, lng: -85.53884358719604 },
+				{ lat: 42.94899344926061, lng: -85.53930398632568 },
+				{ lat: 42.963064568340236, lng: -85.53964730907958 },
+				{ lat: 42.963567048799156, lng: -85.54393884350341 },
+				{ lat: 42.97072694940378, lng: -85.54479715038818 },
+				{ lat: 42.97072694940378, lng: -85.55990335156005 },
+				{ lat: 42.98516982601827, lng: -85.55904504467529 },
+				{ lat: 42.985420976468895, lng: -85.58359262157958 },
+				{ lat: 43.0287290741364, lng: -85.58324929882568 },
+				{ lat: 43.02951335953451, lng: -85.66989537884277 },
+				{ lat: 43.01517503971821, lng: -85.6773197333959 }
 			];
 			polygon = new google.maps.Polygon({
 				paths: area,
@@ -607,50 +614,25 @@
 		</div>
 		<div class="album text-center">
 			<div class="container">
-				<div class="row justify-content-center">
-					<h2 class="thisweeksmenu pink pb-2">menu for Sunday Nov 20</h2>
-					<div class="col-12 col-md-4">
+				<div class="row justify-content-center">			
+					<div class="col-12 col-md-10 pt-3">
 						<div class="card">
-							<div class="card-body fade-in menuItem">
-		    					<h4>#1 croissant</h4>
-								<p class="card-text">A bakeday classic! You know what a croissant is. Made with organic flour and very expensive butter.</p>
+							<div class="card-body fade-in">
+								<h2 class="thisweeksmenu">menu for Sunday Nov 20: <span class="notThisWeek">sold out!</span></h2>
+								<p class="card-text">Aw man you missed it! Bakeday will be back very soon though. Sign up below to get an email alert next time it's happening!</p>
+								<div id="mc_embed_signup">
+									<form action="https://github.us20.list-manage.com/subscribe/post?u=d8ad137324977f3a975bc2711&amp;id=b2be11a859&amp;f_id=00df4ee6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+										<div id="mc_embed_signup_scroll">									   
+											<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address" required>
+											<div hidden="true"><input type="hidden" name="tags" value="3139784"></div>
+											<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8ad137324977f3a975bc2711_b2be11a859" tabindex="-1" value=""></div>
+											<div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+										</div>
+									</form>
+								</div>								
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-4">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h4>#2 blueberry lemon scone</h4>
-								<p class="card-text">A bakeday standard with a lemon twist. Big fat bloobs in a lemon scone with a lemon glaze. </p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h4>#3 cranberry orange scone</h4>
-								<p class="card-text">By special request! Bright orange flavors and pops of juicy cranberries. Mmmmm, zesty!</p>
-							</div>
-						</div>
-					</div>					
-				</div>	
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-4">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h4>#4 apple brown sugar cinnamon scone</h4>
-								<p class="card-text">All the tastes of fall in a light, crumbly scone. Tender chunks of apple and a crunchy brown sugar topping.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="card">
-							<div class="card-body fade-in menuItem">
-								<h4>#5 choco-no-nut cookie</h4>
-								<p class="card-text">At least three different people have told me that this is "literally the best chocolate chip cookie" they've ever had. </p>
-							</div>
-						</div>
-					</div>					
 				</div>
 			</div>			
 		</div>
@@ -757,16 +739,16 @@
 						</div>
 						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
                             <a href="https://www.instagram.com/p/CdZW8wzrY2e/">
-                                <img src="https://i.imgur.com/nPxusMT.jpg" class="img-thumbnail" alt="Great content.">
+								<img src="https://i.imgur.com/nPxusMT.jpg" class="img-thumbnail" alt="Great content.">
                                 <span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
                             </a>
-                        </div>
+                       </div>
 						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
-                            <a href="https://www.instagram.com/p/Cd3Oe3OL-Z9/?utm_source=ig_web_copy_link">
-                                <img src="https://i.imgur.com/vrq8SZF.jpg" class="img-thumbnail" alt="Great content.">
-                                <span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
-                             </a>
-                        </div>
+							<a href="https://www.instagram.com/p/Cd3Oe3OL-Z9/?utm_source=ig_web_copy_link">
+								<img src="https://i.imgur.com/vrq8SZF.jpg" class="img-thumbnail" alt="Great content.">
+								<span class="overlay"><img src="https://gist.githubusercontent.com/sunday-bakeday/d6ccf666e5fc369d3ff3e474fbdc2fc4/raw/b5775f9f2f2ba8a953b2ae80822d2db1dca313f5/instagram.svg" alt="Sunday Bakeday on Instagram" width="64"></span>
+							</a>
+						</div>
 						<div class="col-6 col-md-2 col-lg-2 mb-4 insta-box">
 							<a href="https://www.instagram.com/p/Cdlv1aXO-05/">
 								<img src="https://i.imgur.com/D0iqKLk.jpg" class="img-thumbnail" alt="Great content.">
@@ -789,3 +771,4 @@
 		
 	</body>
 </html>
+
