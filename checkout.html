@@ -9,7 +9,7 @@
       <body>
         <div id="paypal-button-container"></div>
         <!-- Sample PayPal credentials (client-id) are included -->
-        <script src="https://www.paypal.com/sdk/js?client-id=AXmzMtdA3Is2jnZNUccmiwSDGgP5e_eMhd0Ax7YasxjbewpmKakSTuGt648OIqb4MdkHQ1CIsE7V_IkV&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AZrJYWJI84zzjaPxJvmLk_k4zqmSWtZUdcBqHf6oxQ4W1YApg7uMzRvq3puycr542jQ5gR9lDB-3gUU0&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
 
         <script>
           const fundingSources = [
@@ -28,7 +28,6 @@
                 shape: 'pill',
                 height: 40,
               },
-              "allow_tip": true,
 
               // set up the transaction
               createOrder: (data, actions) => {
